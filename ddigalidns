@@ -1,0 +1,123 @@
+[ghw@DigitalHost.pts/0] ~ % dig gehaowu.com @223.6.6.6 +trace +all
+
+; <<>> DiG 9.10.3 <<>> gehaowu.com @223.6.6.6 +trace +all
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 51531
+;; flags: qr rd ra; QUERY: 1, ANSWER: 13, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;.                              IN      NS
+
+;; ANSWER SECTION:
+.                       421225  IN      NS      j.root-servers.net.
+.                       421225  IN      NS      b.root-servers.net.
+.                       421225  IN      NS      l.root-servers.net.
+.                       421225  IN      NS      a.root-servers.net.
+.                       421225  IN      NS      g.root-servers.net.
+.                       421225  IN      NS      f.root-servers.net.
+.                       421225  IN      NS      d.root-servers.net.
+.                       421225  IN      NS      m.root-servers.net.
+.                       421225  IN      NS      e.root-servers.net.
+.                       421225  IN      NS      k.root-servers.net.
+.                       421225  IN      NS      c.root-servers.net.
+.                       421225  IN      NS      h.root-servers.net.
+.                       421225  IN      NS      i.root-servers.net.
+
+;; Query time: 330 msec
+;; SERVER: 223.6.6.6#53(223.6.6.6)
+;; WHEN: 一 12 07 21:29:43 CST 2015
+;; MSG SIZE  rcvd: 228
+
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 52113
+;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 15, ADDITIONAL: 16
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags: do; udp: 4096
+;; QUESTION SECTION:
+;gehaowu.com.                   IN      A
+
+;; AUTHORITY SECTION:
+com.                    172800  IN      NS      a.gtld-servers.net.
+com.                    172800  IN      NS      b.gtld-servers.net.
+com.                    172800  IN      NS      c.gtld-servers.net.
+com.                    172800  IN      NS      d.gtld-servers.net.
+com.                    172800  IN      NS      e.gtld-servers.net.
+com.                    172800  IN      NS      f.gtld-servers.net.
+com.                    172800  IN      NS      g.gtld-servers.net.
+com.                    172800  IN      NS      h.gtld-servers.net.
+com.                    172800  IN      NS      i.gtld-servers.net.
+com.                    172800  IN      NS      j.gtld-servers.net.
+com.                    172800  IN      NS      k.gtld-servers.net.
+com.                    172800  IN      NS      l.gtld-servers.net.
+com.                    172800  IN      NS      m.gtld-servers.net.
+com.                    86400   IN      DS      30909 8 2 E2D3C916F6DEEAC73294E8268FB5885044A833FC5459588F4A9184CF C41A5766
+com.                    86400   IN      RRSIG   DS 8 1 86400 20151217050000 20151207040000 62530 . EEGliGvsXkcmPUj0v+ieRcehq6Cu6dJ6ZmqMbAvq3jbSyEhbDG1SpthU 8V5tC4tY/65K9qLEm6aYWxfCvVU5Ga03QdNeamVCqix0Txdi3XwdXAc0 uANQ/CvrBym6HlfpgXR4ow/9sQUOSvYEB1UvjW16qj6Okd6MhDYVbqoY VRQ=
+
+;; ADDITIONAL SECTION:
+a.gtld-servers.net.     172800  IN      A       192.5.6.30
+b.gtld-servers.net.     172800  IN      A       192.33.14.30
+c.gtld-servers.net.     172800  IN      A       192.26.92.30
+d.gtld-servers.net.     172800  IN      A       192.31.80.30
+e.gtld-servers.net.     172800  IN      A       192.12.94.30
+f.gtld-servers.net.     172800  IN      A       192.35.51.30
+g.gtld-servers.net.     172800  IN      A       192.42.93.30
+h.gtld-servers.net.     172800  IN      A       192.54.112.30
+i.gtld-servers.net.     172800  IN      A       192.43.172.30
+j.gtld-servers.net.     172800  IN      A       192.48.79.30
+k.gtld-servers.net.     172800  IN      A       192.52.178.30
+l.gtld-servers.net.     172800  IN      A       192.41.162.30
+m.gtld-servers.net.     172800  IN      A       192.55.83.30
+a.gtld-servers.net.     172800  IN      AAAA    2001:503:a83e::2:30
+b.gtld-servers.net.     172800  IN      AAAA    2001:503:231d::2:30
+
+;; Query time: 0 msec
+;; SERVER: 192.203.230.10#53(192.203.230.10)
+;; WHEN: 一 12 07 21:29:44 CST 2015
+;; MSG SIZE  rcvd: 735
+
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 4865
+;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 4, ADDITIONAL: 5
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags: do; udp: 4096
+;; QUESTION SECTION:
+;gehaowu.com.                   IN      A
+
+;; AUTHORITY SECTION:
+gehaowu.com.            172800  IN      NS      zelda.ns.cloudflare.com.
+gehaowu.com.            172800  IN      NS      algin.ns.cloudflare.com.
+gehaowu.com.            86400   IN      DS      2371 13 2 01236575FCC71B664659B7E784C9AC50542516C8950D8A80E0FF5E2A 82505BA2
+gehaowu.com.            86400   IN      RRSIG   DS 8 2 86400 20151213152126 20151206141126 51797 com. xSIYcMJB+tQN7YJnWfBnxvF/4E+ZqdTtE3UATv1NgF+AQq4Yo/kBCS18 58iPyu4SO3OpFrtNVH5heEhfeS/3tHj7+deEBmuBYNdzCApMBfUwQWSV 5WgPvKCM0x8IhO4LeT8oMWX9Ko9AmnWDAPmiwDhpI7Qb/+LUvUH3aMCc FaU=
+
+;; ADDITIONAL SECTION:
+zelda.ns.cloudflare.com. 172800 IN      A       173.245.58.242
+zelda.ns.cloudflare.com. 172800 IN      AAAA    2400:cb00:2049:1::adf5:3af2
+algin.ns.cloudflare.com. 172800 IN      A       173.245.59.61
+algin.ns.cloudflare.com. 172800 IN      AAAA    2400:cb00:2049:1::adf5:3b3d
+
+;; Query time: 55 msec
+;; SERVER: 192.31.80.30#53(192.31.80.30)
+;; WHEN: 一 12 07 21:29:44 CST 2015
+;; MSG SIZE  rcvd: 393
+
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 15232
+;; flags: qr aa; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags: do; udp: 512
+;; QUESTION SECTION:
+;gehaowu.com.                   IN      A
+
+;; ANSWER SECTION:
+gehaowu.com.            300     IN      A       115.28.33.203
+gehaowu.com.            300     IN      RRSIG   A 13 2 300 20151208142944 20151206122944 35273 gehaowu.com. +/LFJnlletmCJ7CrRFHQOIhT0iGB2cQOFu5A8M5iSwJbw4qE03PwRHu5 5W+JOxGaelDlqIuAB8/DPWQ8Cc9XBQ==
+
+;; Query time: 4 msec
+;; SERVER: 173.245.58.242#53(173.245.58.242)
+;; WHEN: 一 12 07 21:29:44 CST 2015
+;; MSG SIZE  rcvd: 163
+

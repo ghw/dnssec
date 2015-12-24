@@ -1,127 +1,77 @@
-[ghw@DigitalHost.pts/0] ~ % dig gehaowu.com +trace +all
+insert into domains (name,type) values (e'','NATIVE');
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'SOA', E'ns7.gehaowu.com. webmaster.gehaowu.com. 2015122102 18000 180 604800 3600', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'NS', E'ns7.gehaowu.com', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'NS', E'ns8.gehaowu.com', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'A', E'104.131.133.165', 600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'AAAA', E'2604:a880:1:20::ce:f001', 600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'_443._tcp.gehaowu.com', E'TLSA', E'3 1 1 3aa8c5f8a041a27e976c06239441c17a922d209efcada54859680e45309936fd', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'MX', E'aspmx.l.google.com', 3600, 1, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'MX', E'alt1.aspmx.l.google.com', 3600, 5, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'MX', E'alt2.aspmx.l.google.com', 3600, 5, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'MX', E'aspmx2.googlemail.com', 3600, 10, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'MX', E'aspmx3.googlemail.com', 3600, 10, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'TXT', E'v=spf1 include:_spf.google.com ~all', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'TXT', E'google-site-verification=Wb-cpOXROysdAwzcaikFSDfahNFYJ8lJbkx0GFBFb8A', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'www.gehaowu.com', E'A', E'115.28.33.203', 600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'www.gehaowu.com', E'AAAA', E'2604:a880:1:20::ce:f001', 600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'_443._tcp.www.gehaowu.com', E'TLSA', E'3 1 1 3aa8c5f8a041a27e976c06239441c17a922d209efcada54859680e45309936fd', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'ns7.gehaowu.com', E'A', E'104.131.133.165', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'ns7.gehaowu.com', E'AAAA', E'2604:a880:1:20::ce:f001', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'ns8.gehaowu.com', E'A', E'115.28.110.169', 3600, 0, 'f' from domains where name=e'';
+1 domains were fully parsed, containing 19 records
 
-; <<>> DiG 9.10.3 <<>> gehaowu.com +trace +all
-;; global options: +cmd
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 26690
-;; flags: qr ra ad; QUERY: 1, ANSWER: 14, AUTHORITY: 0, ADDITIONAL: 1
 
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags: do; udp: 512
-;; QUESTION SECTION:
-;.                              IN      NS
 
-;; ANSWER SECTION:
-.                       4995    IN      NS      a.root-servers.net.
-.                       4995    IN      NS      b.root-servers.net.
-.                       4995    IN      NS      c.root-servers.net.
-.                       4995    IN      NS      d.root-servers.net.
-.                       4995    IN      NS      e.root-servers.net.
-.                       4995    IN      NS      f.root-servers.net.
-.                       4995    IN      NS      g.root-servers.net.
-.                       4995    IN      NS      h.root-servers.net.
-.                       4995    IN      NS      i.root-servers.net.
-.                       4995    IN      NS      j.root-servers.net.
-.                       4995    IN      NS      k.root-servers.net.
-.                       4995    IN      NS      l.root-servers.net.
-.                       4995    IN      NS      m.root-servers.net.
-.                       4995    IN      RRSIG   NS 8 0 518400 20151217050000 20151207040000 62530 . jfaEKsM9mT5rKn98xMSxtQcfj23z6P8vmQmCV2eIEGOFyXg1oRnE6qAv qQ+CxaFXV2cWT/9+2No2RDVd8MgiYZU8vmE64e4JYcYJ55XmC7enbaUz CrWsSo6lAdM0ckP9nIMBz7ZjKKbzQ92wzAx6XYd14pyQ9nhhwwOPDQCU 6fI=
 
-;; Query time: 19 msec
-;; SERVER: 2001:4860:4860::8844#53(2001:4860:4860::8844)
-;; WHEN: 一 12 07 21:25:51 CST 2015
-;; MSG SIZE  rcvd: 397
 
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 57065
-;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 15, ADDITIONAL: 16
 
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags: do; udp: 4096
-;; QUESTION SECTION:
-;gehaowu.com.                   IN      A
 
-;; AUTHORITY SECTION:
-com.                    172800  IN      NS      h.gtld-servers.net.
-com.                    172800  IN      NS      k.gtld-servers.net.
-com.                    172800  IN      NS      c.gtld-servers.net.
-com.                    172800  IN      NS      m.gtld-servers.net.
-com.                    172800  IN      NS      d.gtld-servers.net.
-com.                    172800  IN      NS      f.gtld-servers.net.
-com.                    172800  IN      NS      e.gtld-servers.net.
-com.                    172800  IN      NS      j.gtld-servers.net.
-com.                    172800  IN      NS      l.gtld-servers.net.
-com.                    172800  IN      NS      i.gtld-servers.net.
-com.                    172800  IN      NS      b.gtld-servers.net.
-com.                    172800  IN      NS      g.gtld-servers.net.
-com.                    172800  IN      NS      a.gtld-servers.net.
-com.                    86400   IN      DS      30909 8 2 E2D3C916F6DEEAC73294E8268FB5885044A833FC5459588F4A9184CF C41A5766
-com.                    86400   IN      RRSIG   DS 8 1 86400 20151217050000 20151207040000 62530 . EEGliGvsXkcmPUj0v+ieRcehq6Cu6dJ6ZmqMbAvq3jbSyEhbDG1SpthU 8V5tC4tY/65K9qLEm6aYWxfCvVU5Ga03QdNeamVCqix0Txdi3XwdXAc0 uANQ/CvrBym6HlfpgXR4ow/9sQUOSvYEB1UvjW16qj6Okd6MhDYVbqoY VRQ=
 
-;; ADDITIONAL SECTION:
-a.gtld-servers.net.     172800  IN      A       192.5.6.30
-b.gtld-servers.net.     172800  IN      A       192.33.14.30
-c.gtld-servers.net.     172800  IN      A       192.26.92.30
-d.gtld-servers.net.     172800  IN      A       192.31.80.30
-e.gtld-servers.net.     172800  IN      A       192.12.94.30
-f.gtld-servers.net.     172800  IN      A       192.35.51.30
-g.gtld-servers.net.     172800  IN      A       192.42.93.30
-h.gtld-servers.net.     172800  IN      A       192.54.112.30
-i.gtld-servers.net.     172800  IN      A       192.43.172.30
-j.gtld-servers.net.     172800  IN      A       192.48.79.30
-k.gtld-servers.net.     172800  IN      A       192.52.178.30
-l.gtld-servers.net.     172800  IN      A       192.41.162.30
-m.gtld-servers.net.     172800  IN      A       192.55.83.30
-a.gtld-servers.net.     172800  IN      AAAA    2001:503:a83e::2:30
-b.gtld-servers.net.     172800  IN      AAAA    2001:503:231d::2:30
 
-;; Query time: 3 msec
-;; SERVER: 2001:dc3::35#53(2001:dc3::35)
-;; WHEN: 一 12 07 21:25:51 CST 2015
-;; MSG SIZE  rcvd: 735
 
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 17358
-;; flags: qr; QUERY: 1, ANSWER: 0, AUTHORITY: 4, ADDITIONAL: 5
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags: do; udp: 4096
-;; QUESTION SECTION:
-;gehaowu.com.                   IN      A
-
-;; AUTHORITY SECTION:
-gehaowu.com.            172800  IN      NS      zelda.ns.cloudflare.com.
-gehaowu.com.            172800  IN      NS      algin.ns.cloudflare.com.
-gehaowu.com.            86400   IN      DS      2371 13 2 01236575FCC71B664659B7E784C9AC50542516C8950D8A80E0FF5E2A 82505BA2
-gehaowu.com.            86400   IN      RRSIG   DS 8 2 86400 20151213152126 20151206141126 51797 com. xSIYcMJB+tQN7YJnWfBnxvF/4E+ZqdTtE3UATv1NgF+AQq4Yo/kBCS18 58iPyu4SO3OpFrtNVH5heEhfeS/3tHj7+deEBmuBYNdzCApMBfUwQWSV 5WgPvKCM0x8IhO4LeT8oMWX9Ko9AmnWDAPmiwDhpI7Qb/+LUvUH3aMCc FaU=
-
-;; ADDITIONAL SECTION:
-zelda.ns.cloudflare.com. 172800 IN      A       173.245.58.242
-zelda.ns.cloudflare.com. 172800 IN      AAAA    2400:cb00:2049:1::adf5:3af2
-algin.ns.cloudflare.com. 172800 IN      A       173.245.59.61
-algin.ns.cloudflare.com. 172800 IN      AAAA    2400:cb00:2049:1::adf5:3b3d
-
-;; Query time: 2 msec
-;; SERVER: 192.42.93.30#53(192.42.93.30)
-;; WHEN: 一 12 07 21:25:52 CST 2015
-;; MSG SIZE  rcvd: 393
-
-;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 16745
-;; flags: qr aa; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags: do; udp: 512
-;; QUESTION SECTION:
-;gehaowu.com.                   IN      A
-
-;; ANSWER SECTION:
-gehaowu.com.            300     IN      A       115.28.33.203
-gehaowu.com.            300     IN      RRSIG   A 13 2 300 20151208142552 20151206122552 35273 gehaowu.com. 98zAvZ8RYg5vDVlwtdQev+3GNVLW54uHcPFr9KxWkjN2MdrPRCzRYPKx C4z+ALix3Kj0DqqwCa1Hgpy8R50oAg==
-
-;; Query time: 4 msec
-;; SERVER: 2400:cb00:2049:1::adf5:3af2#53(2400:cb00:2049:1::adf5:3af2)
-;; WHEN: 一 12 07 21:25:52 CST 2015
-;; MSG SIZE  rcvd: 163
-
-[ghw@DigitalHost.pts/0] ~ %
+insert into domains (name,type) values (e'','NATIVE');
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'SOA', E'ns7.gehaowu.com. webmaster.gehaowu.com. 2015122102 18000 180 604800 3600', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'RRSIG', E'SOA 13 2 3600  20160120110425 20151221110425 15280 gehaowu.com. JGCNgh0ZmRgExBqWGwZuwnDnsWMBewgxmeIW qsy672ub0+y0OPU7NEN1/WBjaaQ2vr+40F5d pYbTQDnLGMi0vA== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'NS', E'ns7.gehaowu.com', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'NS', E'ns8.gehaowu.com', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'RRSIG', E'NS 13 2 3600  20160120110425 20151221110425 15280 gehaowu.com. 54HCO/AAc0CMWi791PhQ+QiNnhpggvCcD52Z ODHt47/3jg8/KJro+UTNblOEzCRgYX//uQ5u OhO4WqJaCJ118A== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'A', E'104.131.133.165', 600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'RRSIG', E'A 13 2 600  20160120110425 20151221110425 15280 gehaowu.com. KPtafSv4yzM2zdXEDqWYs0y34QPSziCJKPps RWjlfujLeeeVPnkitB5lk9j2Xu6eD1UEO7ay x87Zo8ew9wNJgw== ', 600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'MX', E'aspmx.l.google.com', 3600, 1, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'MX', E'alt1.aspmx.l.google.com', 3600, 5, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'MX', E'alt2.aspmx.l.google.com', 3600, 5, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'MX', E'aspmx2.googlemail.com', 3600, 10, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'MX', E'aspmx3.googlemail.com', 3600, 10, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'RRSIG', E'MX 13 2 3600  20160120110425 20151221110425 15280 gehaowu.com. PngI1kOH9ctWFcEVE0OgWVawtisK2bevzNIE O9YHA8ogVsWdIwZz6OEw5V7lPIR0Tuo7Wmce zzKblOmPv3P9YA== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'TXT', E'"v=spf1" "include:_spf.google.com" "~all"', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'TXT', E'"google-site-verification=Wb-cpOXROysdAwzcaikFSDfahNFYJ8lJbkx0GFBFb8A"', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'RRSIG', E'TXT 13 2 3600  20160120110425 20151221110425 15280 gehaowu.com. +mX9Aupt+iReuBSSkFxFkoQRmb3Vy/OOBNWi uZsfJDamrn2ohJEGN9Qb4a7kPg7Fd2LB+YU4 EX2xequOU14PGw== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'AAAA', E'2604:a880:1:20::ce:f001', 600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'RRSIG', E'AAAA 13 2 600  20160120110425 20151221110425 15280 gehaowu.com. shjSW6x0K6paVnw3jdgb0w9NvK+/jNca0t56 qJ8Vt/Vh2t4x5riuBWFN5v5aNXFRYTJ6wj37 ghXQwCvlO9DRDw== ', 600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'DNSKEY', E'257 3 13  o8azj24K/mThxLn015a1sr2mea4V4h/vQJI2 sI9QyYf10mlkgWZAHg4ao8zWp/QCbcF7CYHp Bxo1qMXSyeo5Fg== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'RRSIG', E'DNSKEY 13 2 3600  20160120110425 20151221110425 15280 gehaowu.com. 8yL5iUFDp6I1BRpTll7dbraX3dqyDtOsm6Hf M7VunAgzmPDOqA/q2hQTCEvWX4iVV8+fypi2 xWjO7vvspX2Djg== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'NSEC3PARAM', E'1 0 100 76ADF1', 0, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'gehaowu.com', E'RRSIG', E'NSEC3PARAM 13 2 0  20160120110425 20151221110425 15280 gehaowu.com. VOI0Z9e3CKX2u4USFvmLr7OCfvbCdBKNTH0W wluan1jbJRZrhElXZ1+uF4EV2mt6SsZECp0W u1K6K5WdfW1H7g== ', 0, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'_443._tcp.gehaowu.com', E'TLSA', E'3 1 1  3AA8C5F8A041A27E976C06239441C17A922D 209EFCADA54859680E45309936FD ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'_443._tcp.gehaowu.com', E'RRSIG', E'TLSA 13 4 3600  20160120110425 20151221110425 15280 gehaowu.com. qm0nS77YwmjKB3Dr5s6hXXvmjgvdkA7WjQZX gLUIGBjsXWClyqusATXUmJopuo1gp9I+jV+v //phtS2UmQeSzg== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'ns8.gehaowu.com', E'A', E'115.28.110.169', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'ns8.gehaowu.com', E'RRSIG', E'A 13 3 3600  20160120110425 20151221110425 15280 gehaowu.com. 2i8bNg7pviV+pQSApVEMXVn6GeDQHDlgZS7B jkQmgdTwmppYJugZ+0ITZrAjt/UIw0wJgn15 dXhllpNnFyKxqA== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'www.gehaowu.com', E'A', E'115.28.33.203', 600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'www.gehaowu.com', E'RRSIG', E'A 13 3 600  20160120110425 20151221110425 15280 gehaowu.com. 0NrbCWbaJYIplGvWR+bJouHII38XSXUSYGQj 7e9zuRXCGOBauAF7BnhsO85OZ5FLf/Jz6joP bW2y+Zi/Zq2UDg== ', 600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'www.gehaowu.com', E'AAAA', E'2604:a880:1:20::ce:f001', 600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'www.gehaowu.com', E'RRSIG', E'AAAA 13 3 600  20160120110425 20151221110425 15280 gehaowu.com. 63WctvgTBf877//Xw31EfyzTPxebA0As2NXX o3Ptu1aks/i3BU238ySPOB8EkIlThtPzHEST ohWaCnG35QgeDA== ', 600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'_443._tcp.www.gehaowu.com', E'TLSA', E'3 1 1  3AA8C5F8A041A27E976C06239441C17A922D 209EFCADA54859680E45309936FD ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'_443._tcp.www.gehaowu.com', E'RRSIG', E'TLSA 13 5 3600  20160120110425 20151221110425 15280 gehaowu.com. e9NTchqQeD4B2+vliNkI7lXuF2FbwukHdXzR hW6RwAAawCNUAvgQEXaVYrugGl7v4d0ke7x/ cr05i1RZHmzSPg== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'0vdoc7lunlh818e0uvrv2l61o6rtfoue.gehaowu.com', E'RRSIG', E'NSEC3 13 3 3600  20160120110425 20151221110425 15280 gehaowu.com. 2PYFucV3huC3ILxrw9xtb279bPiUWVAE1BQw cEiF/1nhl7Ciw6VCy3ljhhrtbXmhack7UZJT c4iu7K1sOq89Ag== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'46gtp1uaq57hjjfik2p00dm66a89c238.gehaowu.com', E'RRSIG', E'NSEC3 13 3 3600  20160120110425 20151221110425 15280 gehaowu.com. YYmfYjrJQoNWYygFW0ZZaJ6DC36foZArObJE 4b8gAeopxmRj+P5xdh+5M9PC9f0UY17oxBP6 zh1HpvCkyJ5Yjw== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'5938too0cisjp7jhidh6af4narrc0krh.gehaowu.com', E'RRSIG', E'NSEC3 13 3 3600  20160120110425 20151221110425 15280 gehaowu.com. zQeSTlcaQangjJuzS09cyBn2mWIP4j5U8MjM fNPVBstOyu8D+0afS9jS6gj2uxDcH4tCUkPY /Qcr+p41yrvcTA== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'92vo4hqevn300r99qd6g3u6j40rm087a.gehaowu.com', E'RRSIG', E'NSEC3 13 3 3600  20160120110425 20151221110425 15280 gehaowu.com. I2Hfr5vDmuLjIVwtzD4lyBvKzN8mI7zWjO3S 6sXpCsutfqoSM0OawUhe77nl4xHIFuRqmhJd DKzbykMJatOyRQ== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'inqcksnjpk0qr559o6krqecdlfvab8e6.gehaowu.com', E'RRSIG', E'NSEC3 13 3 3600  20160120110425 20151221110425 15280 gehaowu.com. 1M5jZY/eFvtu5cuDPOuXE0Rx1NlK53IVB+60 6PyXmGIyN/6g0d1GxqpCMvoalkl1mzGyBNzn Hcl1gtxkUL5QeA== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'oo9eo78e1t49rqlo9piiqr4rcdnnqbqe.gehaowu.com', E'RRSIG', E'NSEC3 13 3 3600  20160120110425 20151221110425 15280 gehaowu.com. WIJwL2t0Y28SqJ/Fom+krO/IPuxak2/jYY6m IDvuV4yoxvGVTcGTkvO7JIHFfhI6pPnsNd2K +45ZHZPiKroEaA== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'pf5u2cvpop4dohfql0kh0p39avhlas9s.gehaowu.com', E'RRSIG', E'NSEC3 13 3 3600  20160120110425 20151221110425 15280 gehaowu.com. dmjKl2Ky0VGEpt9ndiFFp90YepCRvX4GZXQc hF31hNNNz6x9aGy3c2GnbOq1WN/ourfl3eny 6JDtupYOT4fpTQ== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'rdr29ac7skph3siemtpun3f4pmf061an.gehaowu.com', E'RRSIG', E'NSEC3 13 3 3600  20160120110425 20151221110425 15280 gehaowu.com. EkRp8nHNzBpSogYMIRdF4QdUirZslwFs5tIn Ayp6viHwxjHvI9qJLlrbDuTAAdgUfIfvsXAw TO1ltGPcSu+KOg== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'ns7.gehaowu.com', E'A', E'104.131.133.165', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'ns7.gehaowu.com', E'RRSIG', E'A 13 3 3600  20160120110425 20151221110425 15280 gehaowu.com. dcPpZ3dldcbJSTjusXdWjtET4YMsnG4aDl6h sW5jYWBoE8QOiJERBoWHwIvuOGGiDXY+H/ZF M1aFHpY+B/keog== ', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'ns7.gehaowu.com', E'AAAA', E'2604:a880:1:20::ce:f001', 3600, 0, 'f' from domains where name=e'';
+insert into records (domain_id, name,type,content,ttl,prio,disabled) select id ,E'ns7.gehaowu.com', E'RRSIG', E'AAAA 13 3 3600  20160120110425 20151221110425 15280 gehaowu.com. PVoRX9naW8gp8rZDQY/zdjFEBFTSG+qCHMdz 3lBN56UGZFCHlFB1I8p9sPZJS5boGAdl1Ds/ TiTa9v5gWrfdsQ== ', 3600, 0, 'f' from domains where name=e'';
+1 domains were fully parsed, containing 52 records
